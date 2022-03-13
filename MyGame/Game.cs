@@ -8,7 +8,7 @@ namespace MyGame
 		public void StartPvPGame()
 		{
 			List<Hero> players = new() { };
-			for (int i = 0; i <= 1; i++)
+			for (int i = 0; i <= 1; i++)			//Creating players for battle
 			{
 				Console.Clear();
 				Console.WriteLine($"Player {i + 1}, enter your name:");
@@ -21,7 +21,7 @@ namespace MyGame
 				bool flag;
 				do
 				{
-					flag = Int32.TryParse(Console.ReadLine(), out choice);
+					flag = Int32.TryParse(Console.ReadLine(), out choice);  //Control of input characters
 					if (!flag || choice > 3 || choice < 1)
 					{
 						Console.WriteLine("Wrong input");
@@ -32,24 +32,24 @@ namespace MyGame
 				switch (choice)
 				{
 					case 1:
-						players.Add(new Hero(name, new Axe(), 4));
+						players.Add(new Hero(name, new Axe(), 250, 10, 4));
 						break;
 					case 2:
-						players.Add(new Hero(name, new SwordAndShield(), 4));
+						players.Add(new Hero(name, new SwordAndShield(), 250, 10, 4));
 						break;
 					case 3:
-						players.Add(new Hero(name, new Bow(), 4));
+						players.Add(new Hero(name, new Bow(), 250, 10, 4));
 						break;
 				}
 			}
-			PvPBattle battle = new(players[0], players[1]);
+			PvPBattle battle = new(players[0], players[1]);		//Start of the PvE batlle
 			battle.DoBattle();
 		}
 		public void StartPvEGame()
 		{
 			SingleGame game;
 			Console.Clear();
-			Console.WriteLine($"Enter your name:");
+			Console.WriteLine($"Enter your name:");				//Creating hero for Single game class
 			string name = Console.ReadLine();
 			Console.WriteLine("Select weapon:");
 			Console.WriteLine("1 - Axe");
@@ -59,7 +59,7 @@ namespace MyGame
 			bool flag;
 			do
 			{
-				flag = Int32.TryParse(Console.ReadLine(), out choice);
+				flag = Int32.TryParse(Console.ReadLine(), out choice);  //Control of input characters
 				if (!flag || choice > 3 || choice < 1)
 				{
 					Console.WriteLine("Wrong input");

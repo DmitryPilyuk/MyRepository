@@ -6,7 +6,7 @@ namespace MyGame
 	class Battle
 	{
 
-		public void PrintPlayerOptions(Hero player)
+		public void PrintPlayerOptions(Hero player)		//Printing the main characteristics of the hero in battle
 		{
 			Console.WriteLine($"{player.GetName()}, select option:");
 			Console.WriteLine("0 - take defence");
@@ -23,34 +23,6 @@ namespace MyGame
 			{
 				Console.WriteLine("4 - ice strike");
 			}
-		}
-		
-		public void PlayerCharacteristics(Hero player)
-		{
-			Console.WriteLine($"{player.GetName()}:");
-			Console.WriteLine($"HP: {player.GetHealPoints()}");
-			Console.WriteLine($"Mana: {player.GetMana()}");
-			Console.WriteLine($"Damage: {player.GetDamage()}");
-			Console.WriteLine($"----------------------------");
-		}
-
-		public void EnemyCharacteristics(Enemy enemy)
-		{
-			Console.WriteLine($"{enemy.GetName()}:");
-			Console.WriteLine($"HP: {enemy.GetHealPoints()}");
-			Console.WriteLine($"Mana: {enemy.GetMana()}");
-			Console.WriteLine($"Damage: {enemy.GetDamage()}");
-			Console.WriteLine($"----------------------------");
-		}
-
-		public bool IsAlive(Hero player)
-		{
-			return (player.GetHealPoints() >= 0);
-		}
-
-		public bool IsEnemyAlive(Enemy enemy)
-		{
-			return (enemy.GetHealPoints() >= 0);
 		}
 	}
 }

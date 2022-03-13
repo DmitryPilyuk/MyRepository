@@ -20,7 +20,7 @@ namespace MyGame
 				bool flag;
 				do
 				{
-					flag = Int32.TryParse(Console.ReadLine(), out a);
+					flag = Int32.TryParse(Console.ReadLine(), out a);		//Control of input characters
 					if (!flag || a > 2 || a < 0)
 					{
 						Console.WriteLine("Wrong input");

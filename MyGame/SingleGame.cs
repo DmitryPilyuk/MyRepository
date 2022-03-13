@@ -15,7 +15,7 @@ namespace MyGame
 
 		public void GameProcess()
 		{
-			bool[] levels = new bool[6] {true, false, false, false, false, false};
+			bool[] levels = new bool[6] {true, false, false, false, false, false};  //Progress of available enemies
 			int choice;
 			do
 			{
@@ -29,7 +29,7 @@ namespace MyGame
 				}
 				Console.Clear();
 				player.PrintAllCharacteristics();
-				Console.WriteLine("Select the level:");
+				Console.WriteLine("Select the level:");         //Printing single-player menu options
 				Console.WriteLine("1 - battle with The Wolf");
 				if (lastTrue < 2)
 				{
@@ -88,14 +88,14 @@ namespace MyGame
 				bool flag;
 				do
 				{
-					flag = Int32.TryParse(Console.ReadLine(), out choice);
+					flag = Int32.TryParse(Console.ReadLine(), out choice);  //Control of input characters
 					if (!flag || choice > lastTrue && choice !=7 || choice < 0)
 					{
 						Console.WriteLine("Wrong input or level closed");
 					}
 				}
 				while (!flag || choice > lastTrue && choice != 7 || choice < 0);
-				switch (choice)
+				switch (choice)		// Enemy selection
 				{
 					case 0:
 						break;
@@ -123,15 +123,15 @@ namespace MyGame
 				}
 				if (choice != 0 && choice != 7)
 				{
-					Hero playerCopy = player.Clone();
+					Hero playerCopy = player.Clone();		//Creating copy and starting battle
 					battle = new PvEBattle(playerCopy, enemy);
 					if (battle.DoBattle())
 					{
-						player.SetExperiencePoints(player.GetExperiencePoints() + enemy.GetExperiencePointsReward());
+						player.SetExperiencePoints(player.GetExperiencePoints() + enemy.GetExperiencePointsReward()); //Adding XP
 						levels[choice] = true;
 					}
 				}
-				if (player.GetExperiencePoints() >= 400)
+				if (player.GetExperiencePoints() >= 400) // Level Updating
 				{
 					player.LevelUp();
 					player.SetExperiencePoints(0);
@@ -153,7 +153,7 @@ namespace MyGame
 			while (choice != 0);
 		}
 
-		public void NewWeapon()
+		public void NewWeapon() //Changing the weapon
 		{
 			Console.Clear();
 			Console.WriteLine("Select weapon:");
@@ -164,7 +164,7 @@ namespace MyGame
 			bool flag;
 			do
 			{
-				flag = Int32.TryParse(Console.ReadLine(), out choice);
+				flag = Int32.TryParse(Console.ReadLine(), out choice);      //Control of input characters
 				if (!flag || choice > 3 || choice < 1)
 				{
 					Console.WriteLine("Wrong input");

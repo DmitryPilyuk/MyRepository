@@ -28,10 +28,11 @@ namespace MyGame
 
 		}
 
-		public Hero Clone()
+		public Hero Clone()			//Creating a copy of the hero
 		{
 			return new Hero(name, weapon, healPoints, damage, level);
 		}
+
 		public int GetExperiencePoints()
 		{
 			return experiencePoints;
@@ -61,20 +62,31 @@ namespace MyGame
 			this.weapon = newWeapon;
 		}
 
-		public void LevelUp()
+		public void LevelUp()           //Increase the level of the hero in single-player mode
 		{
 			this.healPoints += 50;
 			this.damage += 10;
 			this.level += 1;
 		}
 
-		public void PrintAllCharacteristics()
+		public override void PrintCharacteristics() //Printing the main characteristics of the unit in battle
 		{
 			Console.WriteLine($"{GetName()}:");
 			Console.WriteLine($"HP: {GetHealPoints()}");
 			Console.WriteLine($"Mana: {GetMana()}");
 			Console.WriteLine($"Damage: {GetDamage()}");
 			Console.WriteLine($"Weapon: {weapon.GetName()}");
+			Console.WriteLine($"----------------------------");
+		}
+
+		public void PrintAllCharacteristics() //Printing all characteristics of the hero in menu
+		{
+			Console.WriteLine($"{GetName()}:");
+			Console.WriteLine($"HP: {GetHealPoints()}");
+			Console.WriteLine($"Mana: {GetMana()}");
+			Console.WriteLine($"Damage: {GetDamage()}");
+			Console.WriteLine($"Weapon: {weapon.GetName()}");
+			Console.WriteLine($"Coefficient of damage received while attacking: {selfDamageCoeff}");
 			Console.WriteLine($"Level: {level}");
 			Console.WriteLine($"XP: {experiencePoints}/400");
 			Console.WriteLine($"-----------------------------");

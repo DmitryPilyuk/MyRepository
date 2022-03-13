@@ -60,5 +60,19 @@ namespace MyGame
 		{
 			return selfDamageCoeff;
 		}
+
+		public virtual void PrintCharacteristics() //Printing the main characteristics of the unit in battle
+		{
+			Console.WriteLine($"{GetName()}:");
+			Console.WriteLine($"HP: {GetHealPoints()}");
+			Console.WriteLine($"Mana: {GetMana()}");
+			Console.WriteLine($"Damage: {GetDamage()}");
+			Console.WriteLine($"----------------------------");
+		}
+
+		public bool IsAlive()
+		{
+			return (GetHealPoints() >= 0);
+		}
 	}
 }

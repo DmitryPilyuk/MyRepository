@@ -11,12 +11,12 @@ namespace MyGame
         public Bear()
         {
             name = "Bear";
-            healPoints = 200;
+            healPoints = 250;
             damage = 30;
             mana = 0;
-            selfDamageCoeff = 1;
+            selfDamageCoeff = 0.7;
             experiencePointsReward = 200;
-            ability = new DamageUp(15, 40);
+            ability = new DamageUp(15, 50);
         }
     }
 }

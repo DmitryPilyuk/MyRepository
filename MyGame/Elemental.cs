@@ -11,7 +11,7 @@ namespace MyGame
         public Elemental()
         {
             name = "Elemental";
-            healPoints = 250;
+            healPoints = 300;
             damage = 40;
             mana = 0;
             selfDamageCoeff = 0.3;
