@@ -11,8 +11,8 @@ namespace MyGame
         public Axe()
         {
             name = "Axe";
-            damage = 30;
-            selfDamageCoeff = 0.7;
+            damage = 35;
+            selfDamageCoeff = 0.6;
         }
     }
 }

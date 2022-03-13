@@ -11,7 +11,7 @@ namespace MyGame
             healPoints = 150;
             damage = 25;
             mana = 0;
-            selfDamageCoeff = 1;
+            selfDamageCoeff = 0.7;
             experiencePointsReward = 200;
             ability = new DamageUp(10, 40);
         }
