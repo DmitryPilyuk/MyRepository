@@ -10,6 +10,7 @@ namespace MyGame
     {
         public SwordAndShield()
         {
+            name = "Sword and shield";
             damage = 20;
             selfDamageCoeff = 0.4;
         }

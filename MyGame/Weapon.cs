@@ -8,6 +8,7 @@ namespace MyGame
 {
 	class Weapon
 	{
+		protected string name;
 		protected int damage;
 		protected double selfDamageCoeff;
 
@@ -21,6 +22,10 @@ namespace MyGame
 			return damage;
 		}
 
+		public string GetName()
+		{
+			return name;
+		}
 		public void SetSelfDamageCoeff(double selfDamageCoeff)
 		{
 			this.selfDamageCoeff = selfDamageCoeff;

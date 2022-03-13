@@ -24,6 +24,8 @@ namespace MyGame
 		{
 			player.SetHealPoints(player.GetHealPoints() - enemy.GetDamage());
 			enemy.SetHealPoints(player.GetHealPoints() - (int)(player.GetDamage() * enemy.GetSelfDamageCoeff()));
+			Console.WriteLine($"{enemy.GetName()} attacked with {enemy.GetDamage()} damage");
+			Console.WriteLine($"{enemy.GetName()} lost {(int)(player.GetDamage() * enemy.GetSelfDamageCoeff())} HP, while attacking");
 		}
 
 		public void TakeDefence()
@@ -41,6 +43,7 @@ namespace MyGame
 		{
 			enemy.SetHealPoints(enemy.GetHealPoints() + enemy.ability.GetValue());
 			enemy.SetMana(enemy.GetMana() - enemy.ability.GetManaCost());
+			Console.WriteLine($"{enemy.GetName()} has healed {enemy.ability.GetValue()} HP");
 		}
 
 		public void UseStrongAttack()
@@ -53,6 +56,7 @@ namespace MyGame
 		{
 			player.SetHealPoints(player.GetHealPoints() - enemy.ability.GetValue());
 			enemy.SetMana(enemy.GetMana() - enemy.ability.GetManaCost());
+			Console.WriteLine($"{enemy.GetName()} used Strong attack with {enemy.ability.GetValue()} damage");
 		}
 
 		public void UseIceStrike()
@@ -67,6 +71,7 @@ namespace MyGame
 		{
 			player.SetHealPoints(player.GetHealPoints() - enemy.ability.GetValue());
 			enemy.SetMana(enemy.GetMana() - enemy.ability.GetManaCost());
+			Console.WriteLine($"{enemy.GetName()} used Ice Strike with {enemy.ability.GetValue()} damage");
 			Console.WriteLine("You are frozen and skip a turn.");
 			EnemyMove();
 		}
@@ -75,6 +80,7 @@ namespace MyGame
 		{
 			enemy.SetDamage(enemy.GetDamage() + enemy.ability.GetValue());
 			enemy.SetMana(enemy.GetMana() - enemy.ability.GetManaCost());
+			Console.WriteLine($"{enemy.GetName()} has increased his damage by {enemy.ability.GetValue()}");
 		}
 
 		public void PlayerMove()
@@ -138,10 +144,12 @@ namespace MyGame
 				else if (enemy.GetName() == "Draugr")
 				{
 					EnemyGetHealed();
+
 				}
 				else if (enemy.GetName() == "Troll" || enemy.GetName() == "Elemental")
 				{
 					EnemyStrongAttack();
+
 				}
 				else if (enemy.GetName() == "Ice Dragon")
 				{
@@ -153,6 +161,8 @@ namespace MyGame
 				EnemyAttack();
 			}
 			enemy.SetMana(enemy.GetMana() + 10);
+			Console.WriteLine("Press any button to continue battle");
+			Console.ReadKey();
 		}
 
 		public bool DoBattle()

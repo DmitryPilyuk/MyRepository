@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dmitr\\source\\2term\\MyGame\\MyGame.csproj": {}
+    "C:\\2term\\MyRepository\\MyGame\\MyGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dmitr\\source\\2term\\MyGame\\MyGame.csproj": {
+    "C:\\2term\\MyRepository\\MyGame\\MyGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dmitr\\source\\2term\\MyGame\\MyGame.csproj",
+        "projectUniqueName": "C:\\2term\\MyRepository\\MyGame\\MyGame.csproj",
         "projectName": "MyGame",
-        "projectPath": "C:\\Users\\Dmitr\\source\\2term\\MyGame\\MyGame.csproj",
+        "projectPath": "C:\\2term\\MyRepository\\MyGame\\MyGame.csproj",
         "packagesPath": "C:\\Users\\Dmitr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dmitr\\source\\2term\\MyGame\\obj\\",
+        "outputPath": "C:\\2term\\MyRepository\\MyGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

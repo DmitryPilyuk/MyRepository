@@ -28,6 +28,7 @@ namespace MyGame
 					}
 				}
 				Console.Clear();
+				player.PrintAllCharacteristics();
 				Console.WriteLine("Select the level:");
 				Console.WriteLine("1 - battle with The Wolf");
 				if (lastTrue < 2)
@@ -50,7 +51,7 @@ namespace MyGame
 					}
 					else
 					{
-						Console.WriteLine("4 - battle with The Troll");
+						Console.WriteLine("3 - battle with The Draugr");
 						if (lastTrue < 4)
 						{
 							Console.WriteLine("4 - battle with The Troll(closed)");
@@ -146,6 +147,7 @@ namespace MyGame
 							Console.WriteLine("Level up. New ability, Ice Strike, was added.");
 							break;
 					}
+					Console.WriteLine("Press any button to continue");
 				}
 			}
 			while (choice != 0);

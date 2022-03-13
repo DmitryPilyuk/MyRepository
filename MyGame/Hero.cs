@@ -19,6 +19,7 @@ namespace MyGame
 			this.level = level;
 			this.healPoints = healPoints;
 			this.damage = damage;
+			this.experiencePoints = 0;
 			selfDamageCoeff = weapon.GetSelfDamageCoeff();
 			mana = 0;
 			getHealed = new GetHealed();
@@ -66,5 +67,18 @@ namespace MyGame
 			this.damage += 10;
 			this.level += 1;
 		}
+
+		public void PrintAllCharacteristics()
+		{
+			Console.WriteLine($"{GetName()}:");
+			Console.WriteLine($"HP: {GetHealPoints()}");
+			Console.WriteLine($"Mana: {GetMana()}");
+			Console.WriteLine($"Damage: {GetDamage()}");
+			Console.WriteLine($"Weapon: {weapon.GetName()}");
+			Console.WriteLine($"Level: {level}");
+			Console.WriteLine($"XP: {experiencePoints}/400");
+			Console.WriteLine($"-----------------------------");
+		}
+
 	}
 }

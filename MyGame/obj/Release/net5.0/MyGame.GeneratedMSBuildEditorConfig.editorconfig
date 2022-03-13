@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = MyGame
-build_property.ProjectDir = C:\Users\Dmitr\source\2term\MyGame\
+build_property.ProjectDir = C:\2term\MyRepository\MyGame\
