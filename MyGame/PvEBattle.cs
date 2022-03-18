@@ -23,7 +23,7 @@ namespace MyGame
 		public void EnemyAttack()
 		{
 			player.SetHealPoints(player.GetHealPoints() - enemy.GetDamage());		//Enemy's attack
-			enemy.SetHealPoints(player.GetHealPoints() - (int)(player.GetDamage() * enemy.GetSelfDamageCoeff())); //Damage received during the attack
+			enemy.SetHealPoints(enemy.GetHealPoints() - (int)(player.GetDamage() * enemy.GetSelfDamageCoeff())); //Damage received during the attack
 			Console.WriteLine($"{enemy.GetName()} attacked with {enemy.GetDamage()} damage");
 			Console.WriteLine($"{enemy.GetName()} lost {(int)(player.GetDamage() * enemy.GetSelfDamageCoeff())} HP, while attacking");
 		}

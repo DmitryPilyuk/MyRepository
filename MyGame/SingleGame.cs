@@ -15,7 +15,7 @@ namespace MyGame
 
 		public void GameProcess()
 		{
-			bool[] levels = new bool[6] {true, false, false, false, false, false};  //Progress of available enemies
+			bool[] levels = new bool[7] {true, false, false, false, false, false, false};  //Progress of available enemies
 			int choice;
 			do
 			{
@@ -69,7 +69,7 @@ namespace MyGame
 							else
 							{
 								Console.WriteLine("5 - battle with The Elemental");
-								if (lastTrue < 5)
+								if (lastTrue < 6)
 								{
 									
 									Console.WriteLine("6 - battle with The Ice Dragon(closed)");

@@ -19,7 +19,7 @@ namespace MyGame
 			{
 				Console.WriteLine("3 - strong attak");
 			}
-			if (player.GetMana() >= player.iceStrike.GetManaCost() && player.GetLevel() == 4)
+			if (player.GetMana() >= player.iceStrike.GetManaCost() && player.GetLevel() >= 4)
 			{
 				Console.WriteLine("4 - ice strike");
 			}
