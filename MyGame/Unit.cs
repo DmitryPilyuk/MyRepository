@@ -72,7 +72,7 @@ namespace MyGame
 
 		public bool IsAlive()
 		{
-			return (GetHealPoints() >= 0);
+			return (GetHealPoints() > 0);
 		}
 	}
 }
