@@ -1,0 +1,12 @@
+C:\2term\BalancedTree\BalancedTree\bin\Debug\net5.0\BalancedTree.deps.json
+C:\2term\BalancedTree\BalancedTree\bin\Debug\net5.0\BalancedTree.dll
+C:\2term\BalancedTree\BalancedTree\bin\Debug\net5.0\ref\BalancedTree.dll
+C:\2term\BalancedTree\BalancedTree\bin\Debug\net5.0\BalancedTree.pdb
+C:\2term\BalancedTree\BalancedTree\obj\Debug\net5.0\BalancedTree.GeneratedMSBuildEditorConfig.editorconfig
+C:\2term\BalancedTree\BalancedTree\obj\Debug\net5.0\BalancedTree.AssemblyInfoInputs.cache
+C:\2term\BalancedTree\BalancedTree\obj\Debug\net5.0\BalancedTree.AssemblyInfo.cs
+C:\2term\BalancedTree\BalancedTree\obj\Debug\net5.0\BalancedTree.csproj.CoreCompileInputs.cache
+C:\2term\BalancedTree\BalancedTree\obj\Debug\net5.0\BalancedTree.dll
+C:\2term\BalancedTree\BalancedTree\obj\Debug\net5.0\ref\BalancedTree.dll
+C:\2term\BalancedTree\BalancedTree\obj\Debug\net5.0\BalancedTree.pdb
+C:\2term\BalancedTree\BalancedTree\obj\Debug\net5.0\BalancedTree.csproj.AssemblyReference.cache
