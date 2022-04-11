@@ -1,0 +1,11 @@
+C:\2term\UniversalSort\UniversalSort\bin\Release\net5.0\UniversalSort.deps.json
+C:\2term\UniversalSort\UniversalSort\bin\Release\net5.0\UniversalSort.dll
+C:\2term\UniversalSort\UniversalSort\bin\Release\net5.0\ref\UniversalSort.dll
+C:\2term\UniversalSort\UniversalSort\bin\Release\net5.0\UniversalSort.pdb
+C:\2term\UniversalSort\UniversalSort\obj\Release\net5.0\UniversalSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\2term\UniversalSort\UniversalSort\obj\Release\net5.0\UniversalSort.AssemblyInfoInputs.cache
+C:\2term\UniversalSort\UniversalSort\obj\Release\net5.0\UniversalSort.AssemblyInfo.cs
+C:\2term\UniversalSort\UniversalSort\obj\Release\net5.0\UniversalSort.csproj.CoreCompileInputs.cache
+C:\2term\UniversalSort\UniversalSort\obj\Release\net5.0\UniversalSort.dll
+C:\2term\UniversalSort\UniversalSort\obj\Release\net5.0\ref\UniversalSort.dll
+C:\2term\UniversalSort\UniversalSort\obj\Release\net5.0\UniversalSort.pdb
