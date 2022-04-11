@@ -8,23 +8,44 @@ namespace BalancedTree
 	public class BalancedTree<T> : IEnumerable<T> where T : IComparable<T>
 	{
 		public BalancedTreeNode<T> Root;
+		public BalancedTreeNode<T> First
+		{
+			get
+			{
+				var current = Root;
+				while (current.left != null)
+				{
+					current = current.left;
+				}
+				return current;
+			}
+		}
+		public BalancedTreeNode<T> Last
+		{
+			get
+			{
+				var current = Root;
+				while (current.right != null)
+				{
+					current = current.right;
+				}
+				return current;
+			}
+		}
 		public int Count;
 
-		public BalancedTree(IEnumerable<T>? elements = null)
+		public BalancedTree()
 		{
-			if (elements == null)
-			{
 				Root = null;
 				Count = 0;
-				
-			}
-			else
+		}
+		public BalancedTree(IEnumerable<T> elements)
+		{
+			Root = null;
+			Count = 0;
+			foreach (var elem in elements)
 			{
-				foreach (var elem in elements)
-				{
-					var node = new BalancedTreeNode<T>(elem);
-					Root = BalancedTreeNode<T>.Add(Root, node);
-				}
+				this.Add(elem);
 			}
 		}
 
@@ -152,7 +173,7 @@ namespace BalancedTree
 
 					while (thisEnumerator.MoveNext() && treeEnumerator.MoveNext())
 					{
-						if (!thisEnumerator.Current.Equals(treeEnumerator))
+						if (!thisEnumerator.Current.Equals(treeEnumerator.Current))
 						{
 							return false;
 						}
@@ -163,9 +184,11 @@ namespace BalancedTree
 			else return false;
 		}
 
-		
+		public new Type GetType()
+		{
+			return base.GetType();
+		}
 
-		public object Clone() => MemberwiseClone();
 		public IEnumerator<T> GetEnumerator()
 		{
 			List<T> nodes = new();
@@ -184,6 +207,7 @@ namespace BalancedTree
 			foreach (var data in nodes)
 			{
 				array[index] = data;
+				++index;
 			}
 		}
 
@@ -194,7 +218,7 @@ namespace BalancedTree
 			string result = "";
 			for (int i = 0; i < Count; i++)
 			{
-				if (i != Count - 1) result += nodes[i].ToString() + ", ";
+				if (i != Count - 1) result += nodes[i].ToString() + "; ";
 				else result += nodes[i].ToString();
 			}
 

@@ -141,16 +141,16 @@ namespace BalancedTree
 			{
 				BalancedTreeNode<T> rightNode = root.right;
 				BalancedTreeNode<T> leftNode = root.left;
-				if (leftNode == null)
+				if (rightNode == null)
 				{
-					return rightNode;
+					return leftNode;
 				}
 				BalancedTreeNode<T> min = FindMin(rightNode);
 				min.right = RemoveMin(rightNode);
 				min.left = leftNode;
 				return ToBalance(min);
 			}
-			return ToBalance(node);
+			return ToBalance(root);
 		}
 
 		internal void PostOrder(Action<T> function)

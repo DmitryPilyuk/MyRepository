@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\2term\\BalancedTree\\BalancedTree\\BalancedTree.csproj": {}
+    "C:\\2term\\MyRepository\\BalancedTree\\BalancedTree\\BalancedTree.csproj": {}
   },
   "projects": {
-    "C:\\2term\\BalancedTree\\BalancedTree\\BalancedTree.csproj": {
+    "C:\\2term\\MyRepository\\BalancedTree\\BalancedTree\\BalancedTree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\2term\\BalancedTree\\BalancedTree\\BalancedTree.csproj",
+        "projectUniqueName": "C:\\2term\\MyRepository\\BalancedTree\\BalancedTree\\BalancedTree.csproj",
         "projectName": "BalancedTree",
-        "projectPath": "C:\\2term\\BalancedTree\\BalancedTree\\BalancedTree.csproj",
+        "projectPath": "C:\\2term\\MyRepository\\BalancedTree\\BalancedTree\\BalancedTree.csproj",
         "packagesPath": "C:\\Users\\Dmitr\\.nuget\\packages\\",
-        "outputPath": "C:\\2term\\BalancedTree\\BalancedTree\\obj\\",
+        "outputPath": "C:\\2term\\MyRepository\\BalancedTree\\BalancedTree\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
