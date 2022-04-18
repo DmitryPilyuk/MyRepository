@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "m3rhQfIxeKJxu8ZWtR2OnodAqrmYCiewmN00gZJsvMQ44fHdoEzwUyHtg4UU209MDz+aUsd+u899LCTxkmUBHQ==",
+  "dgSpecHash": "gv6vEVv/AoFgelhXwKzYmZ84wU4DfxXjgpxNxIqbvn8yupzwOUjmtsVgRR7Tt4GQWDXKJLqdnegHu0NQr8PpDg==",
   "success": true,
   "projectFilePath": "C:\\2term\\MyRepository\\BalancedTree\\Test\\Test.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Dmitr\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
   "logs": []
 }

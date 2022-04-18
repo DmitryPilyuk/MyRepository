@@ -7,6 +7,8 @@ namespace Test
 		static void Main(string[] args)
 		{
 			BalancedTreeTest.RunBalancedTreeTests();
+			Console.WriteLine();
+			ExtensionsTest.RunExtensionsTests();
 		}
 	}
 }

@@ -9,24 +9,27 @@
   },
   "packageFolders": {
     "C:\\Users\\Dmitr\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\2term\\UniversalSort\\UniversalSort\\UniversalSort.csproj",
+      "projectUniqueName": "C:\\2term\\MyRepository\\UniversalSort\\UniversalSort\\UniversalSort.csproj",
       "projectName": "UniversalSort",
-      "projectPath": "C:\\2term\\UniversalSort\\UniversalSort\\UniversalSort.csproj",
+      "projectPath": "C:\\2term\\MyRepository\\UniversalSort\\UniversalSort\\UniversalSort.csproj",
       "packagesPath": "C:\\Users\\Dmitr\\.nuget\\packages\\",
-      "outputPath": "C:\\2term\\UniversalSort\\UniversalSort\\obj\\",
+      "outputPath": "C:\\2term\\MyRepository\\UniversalSort\\UniversalSort\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\Dmitr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

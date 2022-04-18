@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\2term\\UniversalSort\\Test\\Test.csproj": {}
+    "C:\\2term\\MyRepository\\UniversalSort\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\2term\\UniversalSort\\Test\\Test.csproj": {
+    "C:\\2term\\MyRepository\\UniversalSort\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\2term\\UniversalSort\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\2term\\MyRepository\\UniversalSort\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\2term\\UniversalSort\\Test\\Test.csproj",
+        "projectPath": "C:\\2term\\MyRepository\\UniversalSort\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\Dmitr\\.nuget\\packages\\",
-        "outputPath": "C:\\2term\\UniversalSort\\Test\\obj\\",
+        "outputPath": "C:\\2term\\MyRepository\\UniversalSort\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Dmitr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -32,8 +34,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\2term\\UniversalSort\\UniversalSort\\UniversalSort.csproj": {
-                "projectPath": "C:\\2term\\UniversalSort\\UniversalSort\\UniversalSort.csproj"
+              "C:\\2term\\MyRepository\\UniversalSort\\UniversalSort\\UniversalSort.csproj": {
+                "projectPath": "C:\\2term\\MyRepository\\UniversalSort\\UniversalSort\\UniversalSort.csproj"
               }
             }
           }
@@ -57,6 +59,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.15, 5.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -66,22 +74,24 @@
         }
       }
     },
-    "C:\\2term\\UniversalSort\\UniversalSort\\UniversalSort.csproj": {
+    "C:\\2term\\MyRepository\\UniversalSort\\UniversalSort\\UniversalSort.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\2term\\UniversalSort\\UniversalSort\\UniversalSort.csproj",
+        "projectUniqueName": "C:\\2term\\MyRepository\\UniversalSort\\UniversalSort\\UniversalSort.csproj",
         "projectName": "UniversalSort",
-        "projectPath": "C:\\2term\\UniversalSort\\UniversalSort\\UniversalSort.csproj",
+        "projectPath": "C:\\2term\\MyRepository\\UniversalSort\\UniversalSort\\UniversalSort.csproj",
         "packagesPath": "C:\\Users\\Dmitr\\.nuget\\packages\\",
-        "outputPath": "C:\\2term\\UniversalSort\\UniversalSort\\obj\\",
+        "outputPath": "C:\\2term\\MyRepository\\UniversalSort\\UniversalSort\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Dmitr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

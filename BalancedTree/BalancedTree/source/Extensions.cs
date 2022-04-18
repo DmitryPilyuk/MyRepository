@@ -1,31 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BalancedTree
 {
 	public static class Extensions
 	{
-		public static bool Any<TSource>(this IEnumerable<TSource> source, Func<TSource, bool>? predicate = null)
+		public static bool Any<TSource>(this IEnumerable<TSource> source)
 		{
-			if (predicate == null)
+			var enumerator = source.GetEnumerator();
+			return enumerator.MoveNext();
+		}
+
+		public static bool Any<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+		{
+			foreach (var element in source)
 			{
-				var enumerator = source.GetEnumerator();
-				return enumerator.MoveNext();
-			}
-			else
-			{
-				foreach (var element in source)
+				if (predicate(element))
 				{
-					if (predicate(element))
-					{
-						return true;
-					}
+					return true;
 				}
-				return false;
 			}
+			return false;
 		}
 
 		public static bool All<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
@@ -40,20 +36,22 @@ namespace BalancedTree
 			return true;
 		}
 
-		public static int Count<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate = null)
+		public static int Count<TSource>(this IEnumerable<TSource> source)
 		{
 			int count = 0;
 			IEnumerator<TSource> enumerator = source.GetEnumerator();
-			if (predicate == null)
-			{
 				while (enumerator.MoveNext())
 				{
 					if (count == int.MaxValue) throw new OverflowException();
 					count++;
 				}
-			}
-			else
-			{
+			return count;
+		}
+
+		public static int Count<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+		{
+			int count = 0;
+			IEnumerator<TSource> enumerator = source.GetEnumerator();
 				while (enumerator.MoveNext())
 				{
 					if (predicate(enumerator.Current))
@@ -62,7 +60,6 @@ namespace BalancedTree
 						count++;
 					}
 				}
-			}
 			return count;
 		}
 
@@ -96,36 +93,45 @@ namespace BalancedTree
 
 		public static TSource First<TSource>(this IEnumerable<TSource> source)
 		{
-			if (source.Count() == 0) throw new InvalidOperationException();
 			var enumerator = source.GetEnumerator();
-			enumerator.MoveNext();
+			if (!enumerator.MoveNext()) throw new InvalidOperationException();
 			return enumerator.Current;
 		}
 
 		public static TSource FirstOrDefault<TSource>(this IEnumerable<TSource> source)
 		{
-			if (source.Count() == 0) return default;
 			var enumerator = source.GetEnumerator();
-			enumerator.MoveNext();
+			if (!enumerator.MoveNext()) return default;
 			return enumerator.Current;
 		}
 
 		public static TSource Last<TSource>(this IEnumerable<TSource> source)
 		{
 			var enumerator = source.GetEnumerator();
-			TSource previous = default;
-		
-				while (enumerator.MoveNext())
-				{
-					previous = enumerator.Current;
-				}
-				return previous;
+			if (!enumerator.MoveNext()) throw new InvalidOperationException();
+			TSource last = enumerator.Current;
+			while (enumerator.MoveNext())
+			{
+				last = enumerator.Current;
+			}
+			return last;
+		}
+
+		public static TSource LastOrDefault<TSource>(this IEnumerable<TSource> source)
+		{
+			var enumerator = source.GetEnumerator();
+			TSource last = default;
+			while (enumerator.MoveNext())
+			{
+				last = enumerator.Current;
+			}
+			return last;
 		}
 
 		public static TSource Min<TSource>(this IEnumerable<TSource> source) where TSource : IComparable<TSource>
 		{
 			var enumerator = source.GetEnumerator();
-			enumerator.MoveNext();
+			if(!enumerator.MoveNext()) return default;
 			TSource min = enumerator.Current;
 			while (enumerator.MoveNext())
 			{
@@ -137,13 +143,22 @@ namespace BalancedTree
 		public static TSource Max<TSource>(this IEnumerable<TSource> source) where TSource : IComparable<TSource>
 		{
 			var enumerator = source.GetEnumerator();
-			enumerator.MoveNext();
+			if (!enumerator.MoveNext()) return default;
 			TSource max = enumerator.Current;
 			while (enumerator.MoveNext())
 			{
 				if (max.CompareTo(enumerator.Current) < 0) max = enumerator.Current;
 			}
 			return max;
+		}
+
+		public static IEnumerable<TSource> Reverse<TSource>(this IEnumerable<TSource> source)
+		{
+			TSource[] array = source.ToArray();
+			for (int i = array.Length - 1; i >= 0; i--)
+			{
+				yield return array[i];
+			}
 		}
 	}
 }
