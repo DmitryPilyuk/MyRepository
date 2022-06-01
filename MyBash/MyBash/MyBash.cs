@@ -7,21 +7,58 @@ using System.Threading.Tasks;
 
 namespace MyBash
 {
-	internal class MyBash
+	public class MyBash
 	{
-		internal const int True = 0;
-		internal const int False = 1;
-		internal string Path { get; set; }
-		internal List<string> Errors { get; set; }
-		internal string Output { get; set; }
-		internal List<Command> Commands { get; private set; }
-		internal int LastOutputStatus { get; set; }
-		internal MyBash()
+		public const int True = 0;
+		public const int False = 1;
+		private string _path;
+		private bool _isWorking;
+		
+		public bool IsWorking{ get => _isWorking; set => _isWorking = value; }
+		public string Path { get => _path; set => _path = value; }
+		public Dictionary<string, List<string>> Variables;
+		public Queue<List<string>> Commands;
+		public int LastOutputStatus { get; set; }
+		public MyBash()
 		{
-			Output = "";
-			LastOutputStatus = 0;
+			_path = "C:\\";
+			Variables = new Dictionary<string, List<string>>();
+			Commands = new Queue<List<string>>();
+			LastOutputStatus = True;
+			_isWorking = true;
+		}
+		public void RunBash()
+		{
+			Console.WriteLine("Приложение MyBash начало работу");
+			while (_isWorking)
+			{
+				Console.Write($"[MyBash   {_path}]");
+				Reader reader = new Reader(this, Console.ReadLine());
+				reader.ReadAndParse();
+				Console.Write("\n");
+				AnalyserAndExecutor executeAll = new AnalyserAndExecutor(this);
+				executeAll.ExecuteString();
+			}
+			Console.WriteLine("Приложение MyBash завершило работу");
 		}
 
+		public void RunScript(string path)
+		{
+			using (StreamReader fileReader = new StreamReader(path))
+			{
+				foreach (var commandLine in fileReader.ReadToEnd().Split('\n'))
+				{
+					if (commandLine == String.Empty)
+					{
+						break;
+					}
+					Reader reader = new Reader(this, commandLine);
+					reader.ReadAndParse();
+					AnalyserAndExecutor executeAll = new AnalyserAndExecutor(this);
+					executeAll.ExecuteString();
+				}
+			}
+		}
 
 	}
 }

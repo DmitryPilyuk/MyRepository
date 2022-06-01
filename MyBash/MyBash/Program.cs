@@ -6,9 +6,8 @@ namespace MyBash
 	{
 		public static void Main(string[] args)
 		{
-			char a = (char)Read();
-			var b = ReadLine();
-			Write(a+b);
+			MyBash bash = new MyBash();
+			bash.RunBash();
 		}
 	}
 }
