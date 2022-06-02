@@ -8,7 +8,7 @@ namespace MyBash.Commands
 		{
 			if (_canExecute(_bash.LastOutputStatus))
 			{
-				_bash.LastOutputStatus = MyBash.True;
+				_bash.LastOutputStatus = MyBash.False;
 				_output = String.Join(" ", _arguments);
 				WriteResult();
 			}

@@ -51,24 +51,25 @@ namespace MyBash
 			{
 				return new NewVarCommand(_bash, commandName.Substring(1, commandName.Length - 2), analysedString);
 			}
-			
-			if (analysedString[^2] == ">")
+			if (analysedString.Count >= 2)
 			{
-				append = false;
-				path = analysedString[^1];
-				analysedString.RemoveAt(analysedString.Count - 1);
-				analysedString.RemoveAt(analysedString.Count - 1);
+				if (analysedString[^2] == ">")
+				{
+					append = false;
+					path = analysedString[^1];
+					analysedString.RemoveAt(analysedString.Count - 1);
+					analysedString.RemoveAt(analysedString.Count - 1);
+				}
+				else if (analysedString[^2] == ">>")
+				{
+					append = true;
+					path = analysedString[^1];
+					analysedString.RemoveAt(analysedString.Count - 1);
+					analysedString.RemoveAt(analysedString.Count - 1);
+				}
 			}
-			else if (analysedString[^2] == ">>")
-			{
-				append = true;
-				path = analysedString[^1];
-				analysedString.RemoveAt(analysedString.Count - 1);
-				analysedString.RemoveAt(analysedString.Count - 1);
-			}
-			
 
-			if (analysedString[0] == "<" )
+			if (analysedString.Count > 0 && analysedString[0] == "<" )
 			{
 				string inputPath;
 				if (File.Exists(_bash.Path + '\\' + analysedString[1]))
@@ -90,6 +91,7 @@ namespace MyBash
 			{
 				case "echo": return new EchoCommand(_bash, analysedString, canExecute, append, path);
 				case "cat": return new CatCommand(_bash, analysedString, canExecute, append, path);
+				case "wc": return new WcCommand(_bash, analysedString, canExecute, append, path);
 				case "pwd": return new PwdCommand(_bash, analysedString, canExecute, append, path);
 				case "cd": return new CdCommand(_bash, analysedString, canExecute);
 				case "true": return new TrueCommand(_bash, analysedString, canExecute);

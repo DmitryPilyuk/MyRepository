@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2xxMlmKqHYlQ7Ynj2x1Jw6SAyB7JPeV5GXRhvg85FkzwRpnj4pAg3OJpCVe7FYeTp+kU7Uy0bl3Wt8QJNtq+RA==",
+  "dgSpecHash": "ORiPyR6a/pKQW6WhKDVLQmej5ICfVk3fQqTc2C/cEdj8DY7/seAJQoTCnlLuVMRrQKxMPbwqQbYoXxZBELzKvQ==",
   "success": true,
-  "projectFilePath": "/home/dmitry/Programming/MyRepository/MyBash/MyBash/MyBash.csproj",
+  "projectFilePath": "C:\\2term\\MyRepository\\MyBash\\MyBash\\MyBash.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -49,7 +49,7 @@ namespace MyBash.Commands
 							words += line.Split().Length;
 						}
 					}
-					totalWords += totalWords;
+					totalWords += words;
 					totalLines += lines.Length - 1;
 					totalBytes += File.ReadAllBytes(path).Length;
 					output[i] =

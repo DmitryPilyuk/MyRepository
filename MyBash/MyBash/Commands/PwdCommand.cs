@@ -20,6 +20,7 @@ namespace MyBash.Commands
 				{
 					sb.Append($"{fileName.Substring(fileName.LastIndexOf('\\') + 1)}\n");
 				}
+				_output = sb.ToString();
 				WriteResult();
 			}
 		}

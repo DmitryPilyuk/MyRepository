@@ -38,9 +38,13 @@ namespace MyBash
 				}
 				else
 				{
-					command.Add(word);
+					if (word != String.Empty)
+					{
+						command.Add(word);
+					}
 				}
 			}
+			_bash.Commands.Enqueue(command);
 		}
 	}
 }

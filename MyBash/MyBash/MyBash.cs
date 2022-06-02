@@ -21,7 +21,7 @@ namespace MyBash
 		public int LastOutputStatus { get; set; }
 		public MyBash()
 		{
-			_path = "C:\\";
+			_path = "C:";
 			Variables = new Dictionary<string, List<string>>();
 			Commands = new Queue<List<string>>();
 			LastOutputStatus = True;
@@ -35,7 +35,6 @@ namespace MyBash
 				Console.Write($"[MyBash   {_path}]");
 				Reader reader = new Reader(this, Console.ReadLine());
 				reader.ReadAndParse();
-				Console.Write("\n");
 				AnalyserAndExecutor executeAll = new AnalyserAndExecutor(this);
 				executeAll.ExecuteString();
 			}

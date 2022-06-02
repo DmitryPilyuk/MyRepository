@@ -34,7 +34,7 @@ namespace MyBash.Commands
 						Console.WriteLine($"MyBash: cat: Файл {arg} не найден");
 						return;
 					}
-					output[i] = File.ReadAllText(path);
+					output[i] = File.ReadAllText(path) + "\n";
 					i++;
 				}
 				_output = String.Concat(output);
