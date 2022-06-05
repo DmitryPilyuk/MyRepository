@@ -1,6 +1,6 @@
 namespace MyBash.Commands
 {
-	internal class TrueCommand : Command
+	public class TrueCommand : Command
 	{
 		public TrueCommand(MyBash bash, List<string> arguments, Predicate<int> canExecute) : base(bash, arguments, canExecute) { }
 		public override void Execute()

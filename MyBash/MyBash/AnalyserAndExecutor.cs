@@ -49,7 +49,7 @@ namespace MyBash
 			
 			if (commandName[0] == '$' && commandName.Length > 2 && commandName[^1] == '=')
 			{
-				return new NewVarCommand(_bash, commandName.Substring(1, commandName.Length - 2), analysedString);
+				return new NewVarCommand(_bash, analysedString, canExecute, commandName.Substring(1, commandName.Length - 2));
 			}
 			if (analysedString.Count >= 2)
 			{
@@ -96,8 +96,8 @@ namespace MyBash
 				case "cd": return new CdCommand(_bash, analysedString, canExecute);
 				case "true": return new TrueCommand(_bash, analysedString, canExecute);
 				case "false": return new FalseCommand(_bash, analysedString, canExecute);
-				case "$?": return new LastStatusCommand(_bash);
-				case "script": return new ScriptCommand(_bash, analysedString[0]);
+				case "$?": return new LastStatusCommand(_bash, analysedString, canExecute);
+				case "script": return new ScriptCommand(_bash, analysedString[0], canExecute);
 				case "exit": return new ExitCommand(_bash);
 				default: return new ErrorCommand(_bash, $"MyBash: команда {commandName} не существует");
 			}

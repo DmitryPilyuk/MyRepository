@@ -17,13 +17,15 @@ namespace MyBash.Commands
 				if (_arguments.Count > 1)
 				{
 					_bash.LastOutputStatus = MyBash.False;
-					Console.WriteLine("MyBash: cd: Слишком много аргументов \n");
+					_output = "cd: Слишком много аргументов";
+					WriteError();
 					return;
 				}
 				else if (_arguments.Count == 0)
 				{
 					_bash.LastOutputStatus = MyBash.False;
-					Console.WriteLine("MyBash: cd: Аргументы не переданы \n");
+					_output = "cd: Аргументы не переданы";
+					WriteError();
 					return;
 				}
 				if (Directory.Exists($"{_bash.Path}\\{_arguments[0]}"))
@@ -39,7 +41,8 @@ namespace MyBash.Commands
 				else
 				{
 					_bash.LastOutputStatus = MyBash.False;
-					Console.WriteLine($"MyBash: cd: {_arguments[0]}: Нет такого файла или каталога\n");
+					_output = $"cd: {_arguments[0]}: Нет такого файла или каталога";
+					WriteError();
 				}
 			}
 		}

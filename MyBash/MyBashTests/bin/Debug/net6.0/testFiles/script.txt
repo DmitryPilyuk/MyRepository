@@ -1,0 +1,3 @@
+echo Script started && pwd
+cat testFile2.txt
+wc testFile1.txt testFile2.txt

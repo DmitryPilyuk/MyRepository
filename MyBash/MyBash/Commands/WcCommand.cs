@@ -14,7 +14,8 @@ namespace MyBash.Commands
 				if (_arguments.Count == 0)
 				{
 					_bash.LastOutputStatus = MyBash.False;
-					Console.WriteLine("MyBash: wc: Аргументы не переданы \n");
+					_output = "wc: Аргументы не переданы";
+					WriteError();
 					return;
 				}
 				long totalWords = 0;
@@ -29,14 +30,15 @@ namespace MyBash.Commands
 					{
 						path = arg;
 					}
-					else if (File.Exists(_bash.Path + '/' + arg))
+					else if (File.Exists(_bash.Path + '\\' + arg))
 					{
-						path = _bash.Path + '/' + arg;
+						path = _bash.Path + '\\' + arg;
 					}
 					else
 					{
 						_bash.LastOutputStatus = MyBash.False;
-						Console.WriteLine($"MyBash: wc: Файл {arg} не найден");
+						_output = $"wc: Файл {arg} не найден";
+						WriteError();
 						return;
 					}
 					long words = 0;
@@ -46,17 +48,26 @@ namespace MyBash.Commands
 					{
 						if (line != String.Empty)
 						{
-							words += line.Split().Length;
+							foreach(var word in line.Split())
+							{
+								if (word != String.Empty)
+								{
+									words++;
+								}
+							}
 						}
 					}
 					totalWords += words;
-					totalLines += lines.Length - 1;
+					totalLines += lines.Length;
 					totalBytes += File.ReadAllBytes(path).Length;
 					output[i] =
-						$"{lines.Length - 1} {words} {File.ReadAllBytes(path).Length} {path.Substring(path.LastIndexOf('\\') + 1)}\n";
+						$"{lines.Length} {words} {File.ReadAllBytes(path).Length} {path.Substring(path.LastIndexOf('\\') + 1)}\n";
 					i++;
 				}
-				output[i] = $"{totalLines} {totalWords} {totalBytes} итого\n";
+				if (_arguments.Count > 1)
+				{
+					output[i] = $"{totalLines} {totalWords} {totalBytes} итого\n";
+				}
 				_output = String.Concat(output);
 				_bash.LastOutputStatus = MyBash.True;
 				WriteResult();

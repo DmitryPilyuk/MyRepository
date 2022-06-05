@@ -1,0 +1,15 @@
+C:\2term\MyRepository\MyBash\MyBash\bin\Release\net6.0\MyBash.exe
+C:\2term\MyRepository\MyBash\MyBash\bin\Release\net6.0\MyBash.deps.json
+C:\2term\MyRepository\MyBash\MyBash\bin\Release\net6.0\MyBash.runtimeconfig.json
+C:\2term\MyRepository\MyBash\MyBash\bin\Release\net6.0\MyBash.dll
+C:\2term\MyRepository\MyBash\MyBash\bin\Release\net6.0\MyBash.pdb
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\MyBash.csproj.AssemblyReference.cache
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\MyBash.GeneratedMSBuildEditorConfig.editorconfig
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\MyBash.AssemblyInfoInputs.cache
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\MyBash.AssemblyInfo.cs
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\MyBash.csproj.CoreCompileInputs.cache
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\MyBash.dll
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\refint\MyBash.dll
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\MyBash.pdb
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\MyBash.genruntimeconfig.cache
+C:\2term\MyRepository\MyBash\MyBash\obj\Release\net6.0\ref\MyBash.dll

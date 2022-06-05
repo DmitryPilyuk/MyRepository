@@ -1,6 +1,6 @@
 namespace MyBash.Commands
 {
-	internal class FalseCommand : Command
+	public class FalseCommand : Command
 	{
 		public FalseCommand(MyBash bash, List<string> arguments, Predicate<int> canExecute) : base(bash, arguments, canExecute) { }
 		

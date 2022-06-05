@@ -1,22 +1,28 @@
 namespace MyBash.Commands
 {
-	public class NewVarCommand : IBashCommand
+	public class NewVarCommand : Command
 	{
-		private MyBash _bash;
-		private List<string> _arguments;
 		private string _name;
 
-		public NewVarCommand(MyBash bash, string name, List<string> arguments)
+		public NewVarCommand(MyBash bash, List<string> arguments, Predicate<int> canExecute, string name) : base(bash, arguments, canExecute)
 		{
-			_bash = bash;
 			_name = name;
-			_arguments = arguments;
 		}
 
-		public void Execute()
+		public override void Execute()
 		{
-			_bash.Variables.Add(_name, _arguments);
-			_bash.LastOutputStatus = MyBash.True;
+			if (_canExecute(_bash.LastOutputStatus))
+			{
+				if (_arguments.Count == 0)
+				{
+					_bash.LastOutputStatus = MyBash.False;
+					_output = $"В переменную {_name} не передано аргументов";
+					WriteError();
+					return;
+				}
+				_bash.Variables.Add(_name, _arguments);
+				_bash.LastOutputStatus = MyBash.True;
+			}
 		}
 	}
 }

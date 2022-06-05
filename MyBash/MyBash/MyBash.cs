@@ -32,7 +32,7 @@ namespace MyBash
 			Console.WriteLine("Приложение MyBash начало работу");
 			while (_isWorking)
 			{
-				Console.Write($"[MyBash   {_path}]");
+				Console.Write($"[MyBash {_path}]");
 				Reader reader = new Reader(this, Console.ReadLine());
 				reader.ReadAndParse();
 				AnalyserAndExecutor executeAll = new AnalyserAndExecutor(this);

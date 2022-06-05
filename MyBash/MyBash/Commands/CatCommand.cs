@@ -11,7 +11,8 @@ namespace MyBash.Commands
 				if (_arguments.Count == 0)
 				{
 					_bash.LastOutputStatus = MyBash.False;
-					Console.WriteLine("MyBash: cat: Аргументы не переданы \n");
+					_output = "cat: Аргументы не переданы";
+					WriteError();
 					return;
 				}
 				string[] output = new string[_arguments.Count];
@@ -31,10 +32,11 @@ namespace MyBash.Commands
 					else
 					{
 						_bash.LastOutputStatus = MyBash.False;
-						Console.WriteLine($"MyBash: cat: Файл {arg} не найден");
+						_output = $"cat: Файл {arg.Substring(arg.LastIndexOf('\\')+1)} не найден";
+						WriteError();
 						return;
 					}
-					output[i] = File.ReadAllText(path) + "\n";
+					output[i] = File.ReadAllText(path) + '\n';
 					i++;
 				}
 				_output = String.Concat(output);

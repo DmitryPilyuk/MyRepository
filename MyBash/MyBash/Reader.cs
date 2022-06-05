@@ -2,18 +2,18 @@ using MyBash.Commands;
 
 namespace MyBash
 { 
-	internal class Reader
+	public class Reader
 	{
 		private readonly string _inputStr;
 		private MyBash _bash;
 
-		internal Reader(MyBash bash, string input)
+		public Reader(MyBash bash, string input)
 		{
 			_bash = bash;
 			_inputStr = input;
 		}
 
-		internal void ReadAndParse()
+		public void ReadAndParse()
 		{
 			List<string> command = new List<string>();
 			string[] splited = _inputStr.Split();

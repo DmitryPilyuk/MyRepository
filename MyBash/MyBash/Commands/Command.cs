@@ -28,7 +28,7 @@ public abstract class Command : IBashCommand
 		}
 		else
 		{
-			if (_path.Contains("\\"))
+			if (_path.Contains('\\'))
 			{
 				int i = _path.Length - 1;
 				while (_path[i] != '\\')
@@ -46,11 +46,17 @@ public abstract class Command : IBashCommand
 				}
 				else
 				{
+					_output = "Файл для перенаправления вывода не найден";
+					WriteError();
 					_bash.LastOutputStatus = MyBash.False;
 				}
 				
 			}
 		}
+	}
+	protected void WriteError()
+	{
+		Console.WriteLine("MyBash: " + _output);
 	}
 
 	public abstract void Execute();

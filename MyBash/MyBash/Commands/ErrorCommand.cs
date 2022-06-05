@@ -3,7 +3,7 @@ namespace MyBash.Commands
 	public class ErrorCommand : IBashCommand
 	{
 		private MyBash _bash;
-		private string _errorMessage;
+		public string _errorMessage;
 		public ErrorCommand(MyBash bash, string error)
 		{
 			_bash = bash;

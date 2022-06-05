@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyBash.Commands
 {
-	internal class PwdCommand : Command
+	public class PwdCommand : Command
 	{
-		public PwdCommand(MyBash bash, List<string> arguments, Predicate<int> canExecute, bool append,
+		public PwdCommand(MyBash bash, List<string> arguments, Predicate<int> canExecute, bool append = true,
 			string? path = null) : base(bash, arguments, canExecute, append, path) { }
 		public override void Execute()
 		{
