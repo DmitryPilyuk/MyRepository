@@ -1,0 +1,12 @@
+C:\2term\Block3\ListMan\ListMan\ListManLib\bin\Release\net6.0\ListManLib.deps.json
+C:\2term\Block3\ListMan\ListMan\ListManLib\bin\Release\net6.0\ListManLib.dll
+C:\2term\Block3\ListMan\ListMan\ListManLib\bin\Release\net6.0\ListManLib.pdb
+C:\2term\Block3\ListMan\ListMan\ListManLib\obj\Release\net6.0\ListManLib.csproj.AssemblyReference.cache
+C:\2term\Block3\ListMan\ListMan\ListManLib\obj\Release\net6.0\ListManLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\2term\Block3\ListMan\ListMan\ListManLib\obj\Release\net6.0\ListManLib.AssemblyInfoInputs.cache
+C:\2term\Block3\ListMan\ListMan\ListManLib\obj\Release\net6.0\ListManLib.AssemblyInfo.cs
+C:\2term\Block3\ListMan\ListMan\ListManLib\obj\Release\net6.0\ListManLib.csproj.CoreCompileInputs.cache
+C:\2term\Block3\ListMan\ListMan\ListManLib\obj\Release\net6.0\ListManLib.dll
+C:\2term\Block3\ListMan\ListMan\ListManLib\obj\Release\net6.0\refint\ListManLib.dll
+C:\2term\Block3\ListMan\ListMan\ListManLib\obj\Release\net6.0\ListManLib.pdb
+C:\2term\Block3\ListMan\ListMan\ListManLib\obj\Release\net6.0\ref\ListManLib.dll

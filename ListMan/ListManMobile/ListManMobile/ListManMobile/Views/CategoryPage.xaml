@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListManMobile.Views.CategoryPage" Title="{Binding CategoryName}">
+    <StackLayout>
+        <Button Text="Добавить" Command="{Binding CreateTaskCommand}" />
+        <ListView x:Name="booksList" ItemsSource="{Binding TaskList}"
+              SelectedItem="{Binding SelectedTask, Mode=TwoWay}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Удалить"
+                                          Command="{Binding TaskList.DeleteTaskCommand}" CommandParameter="{Binding}" />
+                        </ViewCell.ContextActions>
+                        <ViewCell.View>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="10*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"  Text="{Binding Path=Date, StringFormat='{}{0:dd.MM.yyyy}'}" FontSize="Medium" />
+                                <Label Grid.Column="1" Text="{Binding Name}" FontSize="Medium" />
+                                <CheckBox Grid.Column="2" IsChecked="{Binding IsCompleted}" />
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

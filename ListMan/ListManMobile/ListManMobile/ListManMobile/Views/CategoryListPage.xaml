@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListManMobile.Views.CategoryListPage" Title="ListMan">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Новая категория" Command="{Binding NewListCommand}" />
+                <Button Text="Сохранить" Command="{Binding SaveCommand}" />
+            </StackLayout>
+            <Button Text="Добавить" Command="{Binding CreateCategoryCommand}" />
+            <ListView x:Name="CategoryList" ItemsSource="{Binding CategoryList}"
+              SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Изменить"
+                                          Command="{Binding CategoryList.EditCategoryCommand}" CommandParameter="{Binding}" />
+                                <MenuItem Text="Удалить"
+                                          Command="{Binding CategoryList.DeleteCategoryCommand}" CommandParameter="{Binding}" />
+                            </ViewCell.ContextActions>
+                            <ViewCell.View>
+                                <Label Grid.Column="0"  Text="{Binding CategoryName}" FontSize="Medium"/>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
