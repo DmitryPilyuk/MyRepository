@@ -12,7 +12,7 @@ namespace ListManLib
 	public class TaskModel : INotifyPropertyChanged
 	{
 		private string _name;
-		private DateOnly _date;
+		private DateTime _date;
 		private bool _isCompleted;
 
 		public string Name
@@ -24,7 +24,7 @@ namespace ListManLib
 				OnPropertyChanged("TaskName");
 			}
 		}
-		public DateOnly Date
+		public DateTime Date
 		{
 			get { return _date; }
 			set 
@@ -47,7 +47,7 @@ namespace ListManLib
 		public TaskModel(string name, DateTime date, bool isCompleted = false)
 		{
 			_name = name;
-			_date = new DateOnly(date.Year, date.Month, date.Day);
+			_date = date;
 			_isCompleted = isCompleted;
 		}
 

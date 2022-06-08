@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\2term\\Block3\\ListMan\\ListMan\\ListManLib\\ListManLib.csproj": {}
+    "C:\\2term\\MyRepository\\ListMan\\ListMan\\ListManLib\\ListManLib.csproj": {}
   },
   "projects": {
-    "C:\\2term\\Block3\\ListMan\\ListMan\\ListManLib\\ListManLib.csproj": {
+    "C:\\2term\\MyRepository\\ListMan\\ListMan\\ListManLib\\ListManLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\2term\\Block3\\ListMan\\ListMan\\ListManLib\\ListManLib.csproj",
+        "projectUniqueName": "C:\\2term\\MyRepository\\ListMan\\ListMan\\ListManLib\\ListManLib.csproj",
         "projectName": "ListManLib",
-        "projectPath": "C:\\2term\\Block3\\ListMan\\ListMan\\ListManLib\\ListManLib.csproj",
+        "projectPath": "C:\\2term\\MyRepository\\ListMan\\ListMan\\ListManLib\\ListManLib.csproj",
         "packagesPath": "C:\\Users\\Dmitr\\.nuget\\packages\\",
-        "outputPath": "C:\\2term\\Block3\\ListMan\\ListMan\\ListManLib\\obj\\",
+        "outputPath": "C:\\2term\\MyRepository\\ListMan\\ListMan\\ListManLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

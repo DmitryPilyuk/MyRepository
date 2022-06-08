@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListManConsole", "ListManConsole\ListManConsole.csproj", "{ECC1673B-B5AA-4AF0-85DE-6B26E1B8869E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListManLib", "..\ListMan\ListManLib\ListManLib.csproj", "{D4AFD7C0-8AE6-42B1-A64D-92CFF5725616}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECC1673B-B5AA-4AF0-85DE-6B26E1B8869E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC1673B-B5AA-4AF0-85DE-6B26E1B8869E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC1673B-B5AA-4AF0-85DE-6B26E1B8869E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC1673B-B5AA-4AF0-85DE-6B26E1B8869E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4AFD7C0-8AE6-42B1-A64D-92CFF5725616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AFD7C0-8AE6-42B1-A64D-92CFF5725616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AFD7C0-8AE6-42B1-A64D-92CFF5725616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AFD7C0-8AE6-42B1-A64D-92CFF5725616}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {477DEA67-7D19-43C7-B532-071FAD365A1E}
+	EndGlobalSection
+EndGlobal

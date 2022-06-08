@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ListManConsole/1.0.0": {
+        "dependencies": {
+          "ListManLib": "1.0.0"
+        },
+        "runtime": {
+          "ListManConsole.dll": {}
+        }
+      },
+      "ListManLib/1.0.0": {
+        "runtime": {
+          "ListManLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ListManConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ListManLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
