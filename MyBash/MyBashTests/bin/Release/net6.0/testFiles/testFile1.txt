@@ -1,0 +1,2 @@
+This text is expected in cat test
+And some strings to wc test
